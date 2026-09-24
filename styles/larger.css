@@ -36,7 +36,7 @@ nav li:last-child a {
 
 /******************************** HEADER ********************************/
 header {
-    grid-template-columns: auto 1fr 44px;
+    grid-template-columns: 1fr 44px;
 }
 
 

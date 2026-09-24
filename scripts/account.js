@@ -49,4 +49,6 @@ function deleteProfile() {
     localStorage.removeItem("ly-Name");
     localStorage.removeItem("ly-Email");
     localStorage.removeItem("ly-Phone");
+
+    location.reload();
 }
