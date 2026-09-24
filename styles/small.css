@@ -182,13 +182,14 @@ p{
     border: none;
     border-radius: 99px;
     margin-bottom: 2rem;
+}
 
 .signup input[type="submit"]:hover {
     background-color: var(--color-primary);
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-}
+
 
 
 /******************************** DISPLAY STYLES ********************************/
@@ -216,11 +217,11 @@ p{
     padding: .5rem;
     margin: .5rem 0 2rem 0;
     width: 260px;
+}
 
-    &:hover {
-        background-color: var(--color-primary);
-        box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
+.display button:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 
