@@ -2,8 +2,8 @@
 
 /******************************** COLOR SCHEME ********************************/
 :root {
---color-primary: #7b3393;
---color-secondary: #B05AC4;
+--color-primary: #008855;
+--color-secondary: #cc4455;
 
 /*Series of Grey Scale Colors*/
 --color-mygrey-05: lab(98% 0 0 );
@@ -32,7 +32,7 @@
 /******************************** BODY TAGS ********************************/
 /* Controls the basic look of the whole page */
 body {
-    font-family: "IBM Plex Serif", serif;  /* Uses the chosen font on the whole page */
+    font-family: "DM Sans", sans-serif;  /* Uses the chosen font on the whole page */
     background-color: var(--color-mygrey-05); /* Changes the color of the website background */
 }
 
@@ -41,7 +41,7 @@ body {
 header {
     padding: 10px 0 10px 10px; /* Adds space around the inside of the header */
     display: grid; /* Places the logo, site name, and menu button in a row */
-    grid-template-columns: auto 44px; /* Sets the width of the logo, site name area, and menu button */
+    grid-template-columns: auto 1fr 44px 44px; /* Sets the width of the logo, site name area, and menu button */
     align-items: end; /* Lines the items up along the bottom */
     column-gap: 8px; /* Adds space between the items */
     border-bottom: solid 1px var(--color-mygrey-20); /* Adds space between the items */
@@ -57,6 +57,23 @@ header img {
 header span {
     color: var(--color-mygrey-90); /* Sets the color of the site name text */
 }
+
+/******************************** DARK MODE BUTTON ********************************/
+.darkbtn {
+    border: none; /* Removes the button border */
+    background: none; /* Removes the button background */
+    width: 44px; /* Gives the button a consistent width */
+    height: 44px; /* Gives the button a consistent height */
+    padding-top: 15px; /* Moves the icon down slightly */
+    display: flex; /* Lets the icon be centered inside the button */
+    justify-content: center; /* Centers the icon left to right */
+}
+
+.darkbtn img {
+    width: 30px; /* Sets the dark mode icon width */
+    height: 30px; /* Sets the dark mode icon height */
+}
+
 
 /******************************** NAVIGATION ********************************/
 /* Controls how the navigation menu looks */
@@ -132,93 +149,92 @@ p{
   color: var(--color-primary);
 }
 
-/******************************** SCHEDULE LAYOUT ********************************/
-.schedule {
-    border-collapse: collapse;
-    margin: 1rem 10px;
-    color: var(--color-mygrey-70);
-    font-size: .7rem;
+/******************************** HIDE CONTENT ********************************/
+.hide {
+    display: none; /* Hides the section that should not be showing */
 }
 
-.schedule tr {
-    border-bottom: 1px solid var(--color-mygrey-20);
-    &:hover {background-color: var(--color-mygrey-05);}
-}
 
-.schedule th {
-    background-color: var(--color-secondary);
-    color: white;
-    padding: 1rem 0;
-}
-
-.schedule td {
-    padding: 5px;
-    vertical-align: top;
-}
-
-.schedule p {
-    margin: 0;
-    padding: 0;
-    color: var(--color-mygrey-60);
-}
-
-.schedule .time {
-    font-weight: 700;
-    font-size: .7rem;
-    color: var(--color-mygrey-40);
-}
-
-.schedule .title {
-    font-weight: 600;
-    color: var(--color-primary);
-    padding-bottom: 5px;
-}
-
-.schedule .name {
-    font-weight: 600;
-    color: var(--color-secondary);
-    text-align: center;
-}
-
-.schedule img {
-    display: block;
-    width: 75px;
-    height: auto;
-    border-radius: 10px;
-    margin: auto;
-}
-
-.schedule .desc {
+/******************************** SIGNUP STYLES ********************************/
+.signup label {
+    font-size: 1rem;
     font-weight: 600;
     color: var(--color-mygrey-50);
-    font-size: .7rem;
-    text-align: center;
-}
-
-/******************************** HERO LAYOUT ********************************/
-.hero {
-    position: relative;
-}
-
-.hero img {
     display: block;
-    width: 100%;
-    height: auto;
+    padding-bottom: 1rem;
 }
 
-.hero h1 {
-    position: absolute;
-    top: 0;
-    left: 0;
+.signup input {
+    display: block;
+    padding: .5rem 10px;
+    width: 275px;
+    border: 1px solid var(--color-mygrey-20);
+    border-radius: 4px;
+}
+
+.signup input[type="submit"] {
+    background-color: var(--color-secondary);
+    color: var(--color-mygrey-05);
+    font-weight: 600;
+    border: none;
+    border-radius: 99px;
+
+    &:hover {
+        background-color: var(--color-primary);
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+}
+
+
+/******************************** DISPLAY STYLES ********************************/
+.display h3 {
+    color: var(--color-mygrey-50);
+    margin: 1rem 0 0 0;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+.display p {
     margin: 0;
-    padding: 10px;
-    background-color: rgba(255,255,255,.6);
-    width: 100%;
-    color: var(--color-mygrey-95);
-    font-weight: 400;
-
+    color: var(--color-primary);
 }
 
+.display button {
+    background-color: var(--color-secondary);
+    color: var(--color-mygrey-05);
+    border: none;
+    border-radius: 99px;
+    padding: .5rem;
+    margin-top: .5rem;
+    width: 260px;
+
+    &:hover {
+        background-color: var(--color-primary);
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+}
+
+
+/******************************** DARK MODE STYLES ********************************/
+.dark {
+    background-color: var(--color-mygrey-95);
+}
+
+.dark h1 {
+    color: var(--color-mygrey-05);
+}
+
+.dark header span {
+    color: var(--color-mygrey-05);
+}
+
+.dark .signup label {
+    color: var(--color-mygrey-20);
+}
+
+.dark .display h3 {
+    color: var(--color-mygrey-20);
+}
 
 /******************************** SOCIAL STUFF ********************************/
 /* Controls the social media icon section */
